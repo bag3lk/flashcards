@@ -1,15 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule, routes } from './app.routes';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, RouterModule.forRoot(routes)],
-  providers: [],    
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+@Component({
+    selector: 'app-root',
+    imports: [RouterOutlet, RouterLink, RouterLinkActive],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
+  })
+  export class AppComponent {
+    title = 'routing-app';
+  }
