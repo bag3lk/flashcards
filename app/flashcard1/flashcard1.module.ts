@@ -4,9 +4,9 @@ import { RouterOutlet } from '@angular/router';
 @Component({
     selector: 'app-root',
     imports: [RouterOutlet,],
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    templateUrl: './flashcard1.component.html',
+    styleUrls: ['./flashcard1.component.css']
   })
-  export class AppComponent {
+  export class fiszka1 {
     title = 'routing-app';
   }
