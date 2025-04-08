@@ -1,0 +1,67 @@
+https://docs.ankiweb.net/getting-started.html
+
+stworz readme czy cos ig
+
+wchodzisz do aplikacji i widzisz swoje decki kart (jak na razie lepiej bez subdeckow (np. parentDeck::subdeck))
+przenosi cie do strony (w html dużo podstron...........) gdzie masz swoje karty
+ukladaja ci sie losowo, najpierw pytanie potem odpowiedz
+[dict?? a moze key to by bylo slowo, ale nie mam jak polaczyc z value.. 
+pewnie bede mogla cos w stylu:
+``` var slowka: { [id: string] : Slowa; } = {};
+	slowka["s1"] = { front: "*slowo*", back: "*slowo*" };
+	slowka["s2"] = { front: "*slowo*", back: "*slowo*" }; ```
+ale wtedy tablica by musiala miec relacje (jakbym zrobila odniesienie do tabeli innej) 
+ale jakbym wpisala slowo to bym musiala manualnie wszedzie... do przemyslenia! ]
+
+stworz app.module.ts!! i znajdz co potrzebujezs miec
+
+
+Dodać Fiszkę i przetestować, czy działa tak, jak powinna 
+(”show answer” - po nacisnieciu pokazuje odpowiedz.. 
+moze porownuje z czyms wpisanym w pole, do przemyslenia)
+
+a wiec!!!!!!!!!! basially trzeba dodac pole show answer czyli pokaz odpowiedz 
+i jesli to matchinguje z tym co masz w glowie bedie dobrze. 
+ewentualnei dodac to dziwne pole i ty cos tam wpisujesz i niby porownujesz bla bla bla
+i mean nie jest to zly pomysl wiec jak cos to:
+1. porownanie to ===
+2. wiecej koduuuuuuuuu
+3. przez button bylaby funkcja dgzei masz takie
+``` fun *cos*(){
+	if(*odpztylu* === *odpwpisana*){
+		wow dobrze
+	}
+	else{
+		masakra ok.
+	}	
+    }
+4. a tak wgl mnóstwo podstron będzie bo
+	a. podstrona na decki rozne
+	b. podstrona na tworzenie deckow z fiszkami 
+	c. podstrona na roznego typu (uwaga uwaga) rozwiazywanie fiszek 
+	(wow omg nie wiedziałam)
+	(co jest!!! apka do rozwiazyawnia fiszek ma podstronę do rozwiazywania ich? WOW!)
+
+tylko jak te podstrony powiazac z glownym tym... eh
+
+tworzenie deckow i diszek..... o japierdole. będzie zle
+nie no bo jakby ogl to nie jest najgorsze ale z drugiej strony no wtf
+musisz mieć tak:
+1. może być alert na nazwe decka
+2. karty... tworzysz przod i tyl pewnie przez inputy (i tak działamy w html)
+3. o jezu zapomniałam o ui XD to będzie MASAKRYCZNE
+4. a i dodaj karte usun karte!!!
+
+
+UI!!!!!!!!! a bardziej gui
+a wiec ogolnie to taka nowa dość nowoczesna ofc
+ciemny motyw pls. pls pls pls
+basically może być hamburger menu do rzeczy typu zmienianie deckow!
+nwm co więcej. ciemny motyw starczy (będzie dużo css)
+porąbane to wgl
+
+
+łączenie z baza danych bedzei o tyle trudne ze nie ogarniam o co chodzi!
+i mean jak np. bylyby to slowka to wiesz robisz tavele ang slowek i tabele nwm jakiś innych powidzmy polskich no i
+``` select * from *ang* INNER JOIN ...*```
+i wtedy komunikacja z baza danyc a backendzie :thumbs_up: 
