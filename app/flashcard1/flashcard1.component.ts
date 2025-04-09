@@ -8,5 +8,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './flashcard1.component.css'
 })
 export class fiszka1 {
-  title='flashcards';
+  fiszka = {
+    "geografia": {question: "Co jest stolicą Kanady?", answer: "Ottawa"},
+    "chemia": {question: "Jaki jest symbol tlenu?", answer: "O"},
+    "angielski": {question:"Jak przetłumaczysz 'przedmiot' na angielski?", answer: "Object"},
+  }
 }

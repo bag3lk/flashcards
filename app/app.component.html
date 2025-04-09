@@ -1,4 +1,12 @@
-<a href="/">main page</a> <br>
-<a href="flashcard1">sub page (this <b>should</b> be a link)</a> <br> <br>  
-
-<router-outlet><router-outlet />
+<div id="parent">
+    <header> . </header>
+    <div id="left">
+        <a href="/">main page</a> <br>
+        <a href="flashcard1">sub page (this <b>should</b> be a link)</a> <br> <br>  
+    </div>
+    <div id="main">
+        abcdefghijklmnoprstquwvxyz <br>
+        <router-outlet></router-outlet>
+    </div>
+    <footer></footer>
+</div>  
