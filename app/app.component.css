@@ -18,6 +18,7 @@ header{
     flex-direction: column;
     border-radius: 0px 0px 0px 20px ;
     border-right:2px dashed #494949;
+    overflow-y:scroll;
 }
 #main{
     background-color: #202020;
@@ -37,4 +38,14 @@ router-outlet{
 }
 #tytul{
     padding:2%;
+}
+a{
+    text-decoration: none;
+    transition: color 1s ease;
+}
+a:hover{
+    color:#868686;
+}
+::-webkit-scrollbar{
+    visibility:hidden;
 }
