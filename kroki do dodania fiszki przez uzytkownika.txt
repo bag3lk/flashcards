@@ -1,0 +1,72 @@
+co trzeba dodac
+
+component.css
+
+#show{
+    margin-right: 10px;
+}
+
+component.html
+
+<div id="flashcards">
+    <div id="question"><p>{{ fiszka[index].question }}</p></div>
+    <div id="answer" *ngIf="isVisible"><p>{{ fiszka[index].answer }}</p></div>
+    <br>
+    <button id="show" (click)="ans()">Pokaż</button>
+    <button (click)="next()">Następne</button>
+</div>      
+<router-outlet></router-outlet>
+
+component.ts
+import { RouterOutlet } from '@angular/router';
+import { CommonModule} from '@angular/common';
+
+@Component({
+  imports: [RouterOutlet, CommonModule],
+})
+export class {{nazwa}} {
+  fiszka = [
+    {question: "pytania", answer: "odpowiedzi"},//i w takim układzie tyle fiszek ile ktoś chce
+  ]
+    index = 0;
+    isVisible = false;
+    
+    ans(){
+      this.isVisible = true;
+    }
+    
+  next(){
+    this.index++;
+    this.isVisible = false;
+  }
+}
+
+
+stworzyć flashcard{{x}}.module.ts
+
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+
+@Component({
+    selector: 'app-root',
+    imports: [RouterOutlet,],
+    templateUrl: './flashcard{{x}}.component.html',
+    styleUrls: ['./flashcard{{x}}.component.css']
+  })
+  export class  {{nazwa}}{
+    title = 'routing-app';
+  }
+
+
+przejść do ../app.routes.ts
+
+import { Flashcard{{x}}Component } from './flashcard3{{x}}/flashcard{{x}}.component';
+
+export const routes: Routes = [
+*cos*
+{path: '', component: },
+]
+
+app.component.html
+w nav dodac:
+<a href="flashcard3">*nazwa fiszki jaka ktoś wybral*</a>

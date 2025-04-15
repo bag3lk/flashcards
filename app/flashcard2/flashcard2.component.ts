@@ -5,14 +5,14 @@ import { CommonModule} from '@angular/common';
 @Component({
   selector: 'app-flashcard1',
   imports: [RouterOutlet, CommonModule],
-  templateUrl: './flashcard1.component.html',
-  styleUrl: './flashcard1.component.css'
+  templateUrl: './flashcard2.component.html',
+  styleUrl: './flashcard2.component.css'
 })
-export class fiszka1 {
+export class fiszka2 {
   fiszka = [
-    {question: "Co jest stolicą Kanady?", answer: "Ottawa"}, //0
-    {question: "Jaki jest symbol tlenu?", answer: "O"}, //1
-    {question:"Jak przetłumaczysz 'przedmiot' na angielski?", answer: "Object"} //2
+    {question: "coscoscos", answer: "dziala"}, //0
+    {question: "hahahahahahaha", answer: "ooooooooooooooooooooooooooooooo"}, //1
+    {question:"meow meow", answer: "meow meow"} //2
   ]
     index = 0;
     isVisible = false;

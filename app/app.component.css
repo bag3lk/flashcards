@@ -35,3 +35,6 @@ header{
 router-outlet{
     margin-top: 20px;
 }
+#tytul{
+    padding:2%;
+}
