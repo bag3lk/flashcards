@@ -1,12 +1,17 @@
 <div id="parent">
-    <header> . </header>
-    <div id="left">
-        <a href="/">main page</a> <br>
-        <a href="flashcard1">sub page (this <b>should</b> be a link)</a> <br> <br>  
+    <header> <h1>Fiszki</h1> </header>
+    <div id="left"> <br>
+        <a href="/">main page</a>
+        <a href="flashcard1">flashcard</a>
+        
+        <div id="newdecks">
+        <br><br><br><br>
+        <button id="nowe">Nowa fiszka</button>    
+        </div>
+        <!-- newdecks pos abs/ left scrollable jak duzo elemtow bedzie -->
     </div>
-    <div id="main">
-        abcdefghijklmnoprstquwvxyz <br>
+    <div id="main"> <br>
         <router-outlet></router-outlet>
     </div>
     <footer></footer>
-</div>  
+</div>

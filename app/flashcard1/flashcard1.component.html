@@ -1,5 +1,8 @@
-hej dziala ci kod
-<ul>
-    <div>{{ fiszka.angielski.question }} {{ fiszka.angielski.answer}}</div>
-</ul>
+<div id="flashcards">
+    <div id="question"><p>{{ fiszka[index].question }}</p></div>
+    <div id="answer" *ngIf="isVisible"><p>{{ fiszka[index].answer }}</p></div>
+    <br>
+    <button id="show" (click)="ans()">Pokaż</button> <!-- moze tez przycisk do ukrywania odpowiedzi? przemyslec -->
+    <button (click)="next()">Następne</button>
+</div>      
 <router-outlet></router-outlet>
