@@ -5,8 +5,7 @@ stworz readme czy cos ig
 wchodzisz do aplikacji i widzisz swoje decki kart (jak na razie lepiej bez subdeckow (np. parentDeck::subdeck))
 przenosi cie do strony (w html dużo podstron...........) gdzie masz swoje karty
 ukladaja ci sie losowo, najpierw pytanie potem odpowiedz
-[dict?? a moze key to by bylo slowo, ale nie mam jak polaczyc z value.. 
-pewnie bede mogla cos w stylu:
+[pewnie bede mogla cos w stylu:
 ``` var slowka: { [id: string] : Slowa; } = {};
 	slowka["s1"] = { front: "*slowo*", back: "*slowo*" };
 	slowka["s2"] = { front: "*slowo*", back: "*slowo*" }; ```

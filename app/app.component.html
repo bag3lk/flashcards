@@ -3,9 +3,10 @@
     <div id="left"> <br>
         <nav>
             <a href="/">Strona główna</a> <br> <br>
-            <a href="flashcard1">Fiszka</a> <br>
-            <a href="flashcard2">Kolejna fiszka</a> <br>
-            <a href="flashcard3">Biologia</a><br>
+            <a href="flashcard1">A</a>
+            <div>
+                <a class="clicked" *ngFor="let name of names" (click)="click()" href="">{{name}}<br></a>
+            </div>
         </nav>
         <div id="newdecks">
         <br><br><br><br>

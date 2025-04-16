@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import {CommonModule} from '@angular/common';
 
-@Component({
-    selector: 'app-root',
-    imports: [RouterOutlet],
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
-  })
-  export class AppComponent {
+@NgModule({
+  declarations: [],
+  imports: [BrowserModule,CommonModule],
+  providers: [],
+  bootstrap: []
+})
+export class AppModule {
     title = 'routing-app';
   }

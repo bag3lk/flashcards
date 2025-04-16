@@ -49,3 +49,6 @@ a:hover{
 ::-webkit-scrollbar{
     visibility:hidden;
 }
+li{
+    list-style: none;
+}
