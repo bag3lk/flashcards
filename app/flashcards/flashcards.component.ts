@@ -17,6 +17,8 @@ export class flashcards{
       /*
       'type' to wybrany jakis deck przez osobe 
       */
+      
+
     ans(){
       this.isVisible = true;
     }

@@ -1,11 +1,17 @@
 import { Injectable, inject } from '@angular/core';
 
+export interface Fiszka {
+  name: string;
+  question: string;
+  answer: string;
+}
+
 @Injectable({
   providedIn: 'root',
 })
 
 export class flashcard {
-  private fiszka = [
+    private fiszka = [
     {name:"O", question: "Co jest stolicą Kanady?", answer: "Ottawa"},
     {name:"O", question: "Jaki jest symbol tlenu?", answer: "O"},
     {name:"O", question:"Jak przetłumaczysz 'przedmiot' na angielski?", answer: "Object"},
@@ -23,9 +29,10 @@ export class flashcard {
     {name:"biologia", question: "Co to astygmatyzm?", answer: "Astygmatyzm to wada wzroku spowodowana nieregularnym kształtem rogówki lub soczewki oka."},
     {name:"sok", question: "a", answer:"b"}
   ];
+
   getFlashcards(){
     return this.fiszka;
-  } 
+  }
   getNazwa(){
     let nazwy = [];
     for(let item of this.fiszka){

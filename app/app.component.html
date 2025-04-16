@@ -3,9 +3,9 @@
     <div id="left"> <br>
         <nav>
             <a href="/">Strona główna</a> <br> <br>
-            <a href="flashcard1">A</a>
+            <!--<a href="flashcard1">A</a> bez id np 0 albo 1 -->
             <div>
-                <a class="clicked" *ngFor="let name of names" (click)="click()" href="">{{name}}<br></a>
+                <a class="clicked" *ngFor="let name of names;" (click)="click($event)">{{name}}<br></a>
             </div>
         </nav>
         <div id="newdecks">

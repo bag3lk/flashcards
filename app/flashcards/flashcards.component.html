@@ -1,6 +1,6 @@
 <div id="flashcards">
-    <div id="question"><p>h</p></div>
-    <div id="answer" *ngIf="isVisible"><p>h</p></div>
+    <div id="question"><p>{{ flashcards.question }}</p></div>
+    <div id="answer" *ngIf="isVisible"><p>{{ flashcards.answer }}</p></div>
     <br>
     <button id="show" (click)="ans()">Pokaż</button>
     <button (click)="next()">Następne</button>
