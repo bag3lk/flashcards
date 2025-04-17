@@ -11,6 +11,7 @@ import { flashcard } from './flashcards.service';
 })
 export class flashcards{
     isVisible = false;
+    isNotVisible = false;
     private service = inject(flashcard);
     flashcards = this.service.getFlashcards();
     private route = inject(ActivatedRoute);
@@ -26,6 +27,8 @@ export class flashcards{
 
         this.index = 0;
         this.card = this.flashcards[this.index];
+        this.isVisible = false;
+        this.isNotVisible = true;
       });
     }
 

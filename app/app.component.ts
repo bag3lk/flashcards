@@ -18,20 +18,16 @@ export class AppComponent {
   i=0;
   deckName: undefined;
   newFiszka = this.flashcards; 
-  isNotVisible = true;
   isVisible= false;
 
   click(event: Event): void{
-    this.isNotVisible = false;
     const element = event.target as HTMLElement;
     const deckName = element.textContent;
     
-    if (deckName){
+    if(deckName){
       this.isVisible = false;
-      this.isNotVisible = false;
       this.newFiszka = this.flashcards.filter(item => item.name === deckName);
       this.router.navigate([deckName]);
-      
     }
   }
 }

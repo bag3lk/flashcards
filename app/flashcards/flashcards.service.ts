@@ -16,7 +16,7 @@ export class flashcard {
     {name:"Pytania", question: "Jaki jest symbol tlenu?", answer: "O"},
     {name:"Pytania", question:"Jak przetłumaczysz 'przedmiot' na angielski?", answer: "Object"},
     {name:"biologia", question: "Jaką objętość posiadają płuca", answer: "5dm³"},
-    {name:"biologia", question: "Jakie jest prawidłowe tętno człowieka", answer: "120/80"},
+    {name:"biologia", question: "Jakie jest prawidłowe ciśnienie człowieka", answer: "120/80"},
     {name:"biologia", question: "Czym sie różni D/N/A od RNA?", answer: "RNA jest jedną nicią, DNA jest ciągłe po obu stornach"},
     {name:"biologia", question: "Na jaki typ infrkcji trzeba brać antybiotyk", answer: "Bakteryjny"},
     {name:"biologia", question: "W kształt jakiej litery układają się fałdy głosowe", answer: "V"},
