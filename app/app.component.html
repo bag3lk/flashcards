@@ -3,7 +3,6 @@
     <div id="left"> <br>
         <nav>
             <a href="/">Strona główna</a> <br> <br>
-            <a href="flashcard1">A</a>
             <div>
                 <a class="clicked" *ngFor="let name of names;" (click)="click($event)">{{name}}<br></a>
             </div>
@@ -14,8 +13,8 @@
         </div>
     </div>
     <div id="main"> <br>
-        <div id="">
-
+        <div id="maintenance" *ngIf="isNotVisible">
+            fiszki!!!!!!!11!1!1!!!!1!!1!!! naucz sie czegos
         </div>
         <router-outlet></router-outlet>
     </div>

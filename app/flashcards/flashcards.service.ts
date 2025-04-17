@@ -6,15 +6,15 @@ export interface Fiszka {
   answer: string;
 }
 
-@Injectable({
+@Injectable({ 
   providedIn: 'root',
 })
 
 export class flashcard {
     private fiszka = [
-    {name:"O", question: "Co jest stolicą Kanady?", answer: "Ottawa"},
-    {name:"O", question: "Jaki jest symbol tlenu?", answer: "O"},
-    {name:"O", question:"Jak przetłumaczysz 'przedmiot' na angielski?", answer: "Object"},
+    {name:"Pytania", question: "Co jest stolicą Kanady?", answer: "Ottawa"},
+    {name:"Pytania", question: "Jaki jest symbol tlenu?", answer: "O"},
+    {name:"Pytania", question:"Jak przetłumaczysz 'przedmiot' na angielski?", answer: "Object"},
     {name:"biologia", question: "Jaką objętość posiadają płuca", answer: "5dm³"},
     {name:"biologia", question: "Jakie jest prawidłowe tętno człowieka", answer: "120/80"},
     {name:"biologia", question: "Czym sie różni D/N/A od RNA?", answer: "RNA jest jedną nicią, DNA jest ciągłe po obu stornach"},
@@ -27,7 +27,8 @@ export class flashcard {
     {name:"biologia", question: "Jaki kwas mamy w żołądku?", answer: "Kwas solny"},
     {name:"biologia", question: "Jeśli twoi rodzice mają grupę krwi A, to jaką ty masz", answer: "A, albo 0"},
     {name:"biologia", question: "Co to astygmatyzm?", answer: "Astygmatyzm to wada wzroku spowodowana nieregularnym kształtem rogówki lub soczewki oka."},
-    {name:"sok", question: "a", answer:"b"}
+    {name:"sok", question: "a", answer:"b"},
+    {name:"angular", question: "aaaaaa", answer: "bbbbbbbb"},
   ];
 
   getFlashcards(){
@@ -42,4 +43,5 @@ export class flashcard {
     }
     return nazwy;
   }
+  
 }

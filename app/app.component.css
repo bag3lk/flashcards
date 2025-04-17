@@ -52,3 +52,7 @@ a:hover{
 li{
     list-style: none;
 }
+a.clicked{
+    cursor: pointer;
+    padding-bottom: 1234567890px;
+}

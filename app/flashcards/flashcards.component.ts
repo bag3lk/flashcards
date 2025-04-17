@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, ActivatedRoute } from '@angular/router';
 import { CommonModule} from '@angular/common';
 import { flashcard } from './flashcards.service';
 
@@ -13,15 +13,31 @@ export class flashcards{
     isVisible = false;
     private service = inject(flashcard);
     flashcards = this.service.getFlashcards();
-      /*
-      'type' to wybrany jakis deck przez osobe 
-      */
+    private route = inject(ActivatedRoute);
+
+    deckName = '';
+    index = 0;
+    card: any;
+    //chat gpt miło pomógł (co to jest........)
+    constructor(){
+      this.route.paramMap.subscribe(params => {
+        this.deckName = params.get('name') ?? '';
+        this.flashcards = this.service.getFlashcards().filter(card => card.name === this.deckName);
+
+        this.index = 0;
+        this.card = this.flashcards[this.index];
+      });
+    }
+
     ans(){
       this.isVisible = true;
     }
     next(){
       this.isVisible = false;
+      if(this.index < this.flashcards.length - 1){
+        this.index++;
+        this.card = this.flashcards[this.index];
+      }
     }
     
-    question : undefined;
 }
