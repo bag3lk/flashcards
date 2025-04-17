@@ -1,6 +1,6 @@
 <div id="flashcards">
-    <div id="question"><p>{{ flashcards.question }}</p></div>
-    <div id="answer" *ngIf="isVisible"><p>{{ flashcards.answer }}</p></div>
+    <div id="question"><p *ngFor="let card of flashcards">{{ card.question }}</p></div>
+    <div id="answer" *ngIf="isVisible" ><p *ngFor="let card of flashcards">{{ card.answer }}</p></div>
     <br>
     <button id="show" (click)="ans()">Pokaż</button>
     <button (click)="next()">Następne</button>

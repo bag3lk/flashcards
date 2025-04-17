@@ -21,7 +21,6 @@ export class AppComponent {
     const element = event.target as HTMLElement;
     const deckName = element.textContent;
   }
-
   random(){
     let newFiszka = [];
     newFiszka = this.flashcards;
