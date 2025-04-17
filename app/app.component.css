@@ -12,13 +12,13 @@ header{
 #left{
     background-color: #202020;
     float:left;
-    height: 30em;
+    height: 100%;
     width:200px;
     display: flex;
     flex-direction: column;
     border-radius: 0px 0px 0px 20px ;
     border-right:2px dashed #494949;
-    overflow-y:scroll;
+    overflow-y:auto;
 }
 #main{
     background-color: #202020;
@@ -46,13 +46,16 @@ a{
 a:hover{
     color:#868686;
 }
-::-webkit-scrollbar{
-    visibility:hidden;
-}
+
 li{
     list-style: none;
 }
 a.clicked{
     cursor: pointer;
     padding-bottom: 1234567890px;
+}
+.scrollable{
+    overflow: hidden;
+    height: 100vh;
+    scrollbar-width: none;
 }
