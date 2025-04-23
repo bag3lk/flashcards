@@ -30,7 +30,6 @@ export class flashcard {
     {name:"sok", question: "a", answer:"b"},
     {name:"angular", question: "aaaaaa", answer: "bbbbbbbb"},
   ];
-
   getFlashcards(){
     return this.fiszka;
   }
@@ -43,5 +42,7 @@ export class flashcard {
     }
     return nazwy;
   }
-  
+  addFlashcard(newFlashcard: Fiszka) {
+    this.fiszka.push(newFlashcard);
+  }
 }

@@ -12,7 +12,7 @@ header{
 #left{
     background-color: #202020;
     float:left;
-    height: 100%;
+    height: 79.5vh;
     width:200px;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,10 @@ header{
 #main{
     background-color: #202020;
     height: 30em;  
-    border-radius: 0px 0px 20px 20px ; 
+    border-radius: 0px 0px 20px     0px ; 
+    padding-bottom: 0px;
+    scrollbar-width: none;
+    overflow-y:auto;
 }
 #nowe{
     background: none;
@@ -31,13 +34,14 @@ header{
     transition: color 1s ease;
 }
 #nowe:hover{
-    color:#b6b6b6;
+    color:#ff9393;
 }
 router-outlet{
     margin-top: 20px;
 }
 #tytul{
     padding:2%;
+    font-size: 150%;
 }
 a{
     text-decoration: none;
@@ -52,10 +56,9 @@ li{
 }
 a.clicked{
     cursor: pointer;
-    padding-bottom: 1234567890px;
 }
 .scrollable{
     overflow: hidden;
-    height: 100vh;
+    height: 10vh;
     scrollbar-width: none;
 }

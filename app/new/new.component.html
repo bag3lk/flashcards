@@ -1,0 +1,16 @@
+<div id="parent">
+    <label for="name">Jak chcesz nazwać swoją fiszkę?: </label>
+    <input id="nazwa" [(ngModel)]="namee"> <br>
+    <label for="liczba"> Ile chcesz mieć pytań?: </label>
+    <input id="liczba" type="number" [(ngModel)]="liczba" (ngModelChange)="generateInputs()"> 
+    <br>
+ <div *ngFor="let i of inputFields">
+    <label for="question-{{i}}">Pytanie {{ i + 1 }} </label>
+    <input id="question-{{i}}" [(ngModel)]="questions[i]">
+    <label for="answer-{{i}}"> Odpowiedź {{ i+1 }} </label>
+    <input id="answer-{{i}}" [(ngModel)]="answers[i]">
+    
+  </div>
+  <br>
+   <button (click)="addFiszka()" id="dodaj">Dodaj fiszkę</button>
+</div>

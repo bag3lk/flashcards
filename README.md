@@ -1,0 +1,1 @@
+co ja probuje zrobic atp

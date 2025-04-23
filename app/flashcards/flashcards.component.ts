@@ -4,7 +4,7 @@ import { CommonModule} from '@angular/common';
 import { flashcard } from './flashcards.service';
 
 @Component({
-  selector: 'app-flashcard1', 
+  selector: 'app-flashcard1',
   imports: [CommonModule, RouterOutlet, ], 
   templateUrl: './flashcards.component.html',
   styleUrl: './flashcards.component.css'
