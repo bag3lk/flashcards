@@ -3,6 +3,6 @@
     <div id="answer" *ngIf="isVisible" ><p *ngIf="card">{{ card.answer }}</p></div>
     <br>
     <button id="show" (click)="ans()">Pokaż</button>
-    <button (click)="next()">Następne</button>
+    <button id="next" (click)="next()">Następne</button>
 </div>
 <router-outlet></router-outlet>

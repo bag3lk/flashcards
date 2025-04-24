@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { flashcard, Fiszka } from '../flashcards/flashcards.service';
 import { FormsModule } from '@angular/forms';
-import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
+import { LocalStorageService } from 'angular-web-storage';
 
 export interface newt{
   name:string;
@@ -24,12 +24,15 @@ export class newt implements OnInit {
 
   newFiszka = {name:'', question:'', answer:''};
   isVisible = false;
+  success = false;
 
   namee: string= '';
   answers: string[] = [];
   questions: string[] = [];
   liczba: number = 0;
   inputFields: number[] = [];
+
+  constructor(public local: LocalStorageService) {}
 
   generateInputs() {
     this.inputFields = [];
@@ -48,8 +51,19 @@ export class newt implements OnInit {
       this.service.addFlashcard(newFlashcard);
     }
     this.flashcards = this.service.getFlashcards();
-    console.log(this.flashcards);
+    this.local.set('flashcards', this.flashcards);
+  
+  const savedFlashcards = this.local.get('flashcards');
+
+  if(savedFlashcards){
+    this.flashcards = savedFlashcards;
+    this.success = true;
+  } 
+  else{
+    this.flashcards = this.service.getFlashcards();
   }
+  this.names = this.service.getNazwa();
+}
 
   ngOnInit(){
     this.flashcards = this.service.getFlashcards();

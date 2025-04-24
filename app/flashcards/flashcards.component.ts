@@ -42,5 +42,8 @@ export class flashcards{
         this.card = this.flashcards[this.index];
       }
     }
-    
+    addNewFlashcard(newFlashcard: any){
+      this.service.addFlashcard(newFlashcard);
+      this.flashcards = this.service.getFlashcards().filter(card => card.name === this.deckName);
+    }
 }

@@ -1,4 +1,5 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
 export interface Fiszka {
   name: string;
@@ -26,23 +27,29 @@ export class flashcard {
     {name:"biologia", question: "Przez jaką drogę się rozprzestrzenia sepsa", answer: "Krwionośną"},
     {name:"biologia", question: "Jaki kwas mamy w żołądku?", answer: "Kwas solny"},
     {name:"biologia", question: "Jeśli twoi rodzice mają grupę krwi A, to jaką ty masz", answer: "A, albo 0"},
-    {name:"biologia", question: "Co to astygmatyzm?", answer: "Astygmatyzm to wada wzroku spowodowana nieregularnym kształtem rogówki lub soczewki oka."},
     {name:"sok", question: "a", answer:"b"},
     {name:"angular", question: "aaaaaa", answer: "bbbbbbbb"},
   ];
   getFlashcards(){
     return this.fiszka;
   }
-  getNazwa(){
+  
+  addFlashcard(newFlashcard: Fiszka) {
+    this.fiszka.push(newFlashcard);
+  }
+  constructor(private local: LocalStorageService, private session: SessionStorageService){}
+  getNazwa() {
+    const savedFlashcards = this.local.get('flashcards');
+    if (savedFlashcards) {
+      this.fiszka = savedFlashcards;
+    }
+  
     let nazwy = [];
-    for(let item of this.fiszka){
-      if(nazwy.indexOf(item.name)===-1){
+    for (let item of this.fiszka) {
+      if (nazwy.indexOf(item.name) === -1) {
         nazwy.push(item.name);
       }
     }
     return nazwy;
-  }
-  addFlashcard(newFlashcard: Fiszka) {
-    this.fiszka.push(newFlashcard);
   }
 }
