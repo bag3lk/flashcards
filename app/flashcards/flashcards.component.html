@@ -1,8 +1,12 @@
 <div id="flashcards">
-    <div id="question"><p *ngIf="card">{{ card.question }}</p></div>
-    <div id="answer" *ngIf="isVisible" ><p *ngIf="card">{{ card.answer }}</p></div>
-    <br>
-    <button id="show" (click)="ans()">Pokaż</button>
-    <button (click)="next()">Następne</button>
+    <div id="question">
+        <p *ngIf="card">{{ card.question }}</p>
+    </div>
+    <div id="answer" *ngIf="isVisible">
+        <hr>
+        <p *ngIf="card">{{ card.answer }}</p>
+    </div>
+    <button class="btn" (click)="ans()">Pokaż</button>
+    <button class="btn" (click)="next()">Następne</button>
 </div>
 <router-outlet></router-outlet>

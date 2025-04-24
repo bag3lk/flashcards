@@ -1,3 +1,9 @@
-#show{
+#show {
     margin-right: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    padding: 10px 15px;
+    border: 1px solid var(--accent);
 }

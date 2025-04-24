@@ -1,22 +1,24 @@
 <div id="parent">
-    <header> <h1 id="tytul">Fiszki</h1> </header>
-    <div id="left"> <br>
+    <header>
+        <a href="/">
+            <h1>Fiszki</h1>
+        </a>
+    </header>
+    <div class="container">
         <nav>
-            <a href="/">Strona główna</a> <br> <br>
-            <div>
-                <a class="clicked" *ngFor="let name of names;" (click)="click($event)">{{name}}<br></a>
+            <div id="decks">
+                <a class="choose-deck" *ngFor="let name of names" (click)="click($event)">{{ name }}</a>
             </div>
+            <button id="new-flashcard">Nowa fiszka</button>
         </nav>
-        <div id="newdecks">
-        <br><br><br><br>
-        <button id="nowe">Nowa fiszka</button>    
+        <div class="container2">
+            <main>
+                <div id="maintenance" *ngIf="isNotVisible">
+                    fiszki!!!!!!!11!1!1!!!!1!!1!!! naucz sie czegos
+                </div>
+                <router-outlet></router-outlet>
+            </main>
+            <footer>:3</footer>
         </div>
     </div>
-    <div id="main"> <br>
-        <div id="maintenance" *ngIf="isNotVisible">
-            fiszki!!!!!!!11!1!1!!!!1!!1!!! naucz sie czegos
-        </div>
-        <router-outlet></router-outlet>
-    </div>
-    <footer></footer>
 </div>

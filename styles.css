@@ -1,3 +1,14 @@
-body{
+:root {
+    --accent: #9c70df;
+}
+
+* {
+    font-family: sans-serif;
+    color: #f1f0f2;
+}
+
+body {
+    margin: 0;
     background-color: #181818;
+    box-sizing: border-box;
 }
