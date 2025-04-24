@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { flashcard, Fiszka } from '../flashcards/flashcards.service';
 import { FormsModule } from '@angular/forms';
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
 export interface newt{
   name:string;
